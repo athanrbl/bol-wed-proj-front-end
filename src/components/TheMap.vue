@@ -1,6 +1,6 @@
 <template>
     <Suspense>
-      <GoogleMap :api-key="mapKEY" :map-id="mapID" style="position: absolute; width: 45%; height: 50%" :center="center" :min-zoom="17" :zoom="18" :max-zoom="19" :disable-default-ui="true">
+      <GoogleMap :api-key="mapKEY" :map-id="mapID" style="width: 95%; height: 95%" :center="center" :min-zoom="17" :zoom="18" :max-zoom="19" :disable-default-ui="true">
       <InfoWindow :options="{ position: center, content: 'Click on a Metro Station to preview!' }" />
       </GoogleMap>
     </Suspense>
