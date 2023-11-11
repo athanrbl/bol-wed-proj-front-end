@@ -6,20 +6,19 @@
     </div>
   </header>
 
-  <main class="wrapper">
-        <StationsList/>
-        <TheMap/>
+  <main>
+    <div class="grid">
+      <StationsList/>
+      <TheMap/>
+    </div>
   </main>
 </template>
 
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
 @media (min-width: 1024px) {
   header {
+    line-height: 1.5;
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
