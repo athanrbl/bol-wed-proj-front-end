@@ -7,7 +7,9 @@
         <NoSVGWelcome msg="Welcome," />
       </header>
         <StationsList/>
-        <TheMap/>
+        <Suspense>
+          <TheMap/>
+        </Suspense>
     </div>
   </main>
 </template>
