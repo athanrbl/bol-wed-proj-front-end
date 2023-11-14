@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, Suspense } from "vue";
+import { defineComponent, ref } from "vue";
 import { GoogleMap, Marker, InfoWindow } from "vue3-google-map";
 
 async function mapPoint() {
@@ -25,14 +25,6 @@ export default defineComponent({
     const apiRes = await mapPoint()
       mapKEY = apiRes["Key"]
       mapID = apiRes["Id"]
-
-    /*
-    onMounted(async () => {
-      const apiRes = await mapPoint()
-      mapKEY = apiRes["Key"]
-      console.log(mapKEY)
-      mapID = apiRes["Id"]
-    })*/
 
     return { center, mapKEY, mapID };
   }
