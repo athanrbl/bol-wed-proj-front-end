@@ -6,8 +6,8 @@
         <img alt="Map logo" class="logo" src="./assets/mapIcon.svg" width="140" height="140" />
         <NoSVGWelcome msg="Welcome," />
       </header>
-        <StationsList/>
-        <Suspense>
+        <StationsList id="stListRef"/>
+        <Suspense class="mapBox">
           <TheMap/>
         </Suspense>
     </div>
