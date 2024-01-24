@@ -1,18 +1,23 @@
+
+<script lang="ts" setup>
+import type { PropType } from 'vue'
+
+const props = defineProps({
+  stations: {
+    type: Array as PropType<{ id: string; name: string, position: { lat: number, lng: number}}[]>,
+    required: true
+  }
+})
+</script>
+
 <template>
   <nav class="staList green">
     <h3 class="grid">Stations List</h3>
-    <button id="btn1" onclick="" class="stCol green"><h2>SYNTAGMA</h2></button>
-    <button id="btn2" onclick="" class="stCol green"><h2>MONASTIRAKI</h2></button>
-    <button id="btn3" onclick="" class="stCol green"><h2>KATEHAKI</h2></button>
-    <button id="btn4" onclick="" class="stCol green"><h2>station 4</h2></button>
-    <button id="btn5" onclick="" class="stCol green"><h2>station 5</h2></button>
-
+    <button v-for="station in stations" :id="station.id" class="stCol green" @click="$emit('toggleStation', station)"><h2>{{station.name}}</h2></button>
+    <button id="btn4" class="stCol" style="color: rgb(150,151,135)"><h2>station 4</h2></button>
+    <button id="btn5" class="stCol" style="color: rgb(150,151,135)"><h2>station 5</h2></button>
   </nav>
 </template>
-
-<script lang="ts">
-//asdasd
-</script>
 
 <style scoped>
 .staList {
