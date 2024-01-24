@@ -1,6 +1,5 @@
 
 # The Map Project
-work in progress
 
 ## Project Setup
 
@@ -18,10 +17,4 @@ npm run dev
 
 ```sh
 npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
